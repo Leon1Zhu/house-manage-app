@@ -1,0 +1,10 @@
+/**
+ * Created by zhuliang on 2018/9/6.
+ * 此scss用来定义全局变量以及全局的scss方法
+ */
+
+$vw_base: 640;
+
+@function vm($px) {
+  @return ($px / $vw_base) * 100vw;
+}

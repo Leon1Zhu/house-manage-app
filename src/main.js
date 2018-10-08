@@ -4,6 +4,8 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import MetaInfo from 'vue-meta-info';
+import './styles/reset.css';
+import './styles/styles.scss';
 
 Vue.use(MetaInfo)
 
