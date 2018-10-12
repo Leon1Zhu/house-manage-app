@@ -2,3 +2,19 @@
   @author zhuliang
   @date 2018/10/8 下午11:58
 */
+@import "../../../styles/globalscss";
+
+.swiper-option {
+  .swiper-pagination {
+    position: static;
+    .swiper-pagination-bullet {
+      width: vm(10);
+      height: vm(3);
+      background: rgba(11,133,205,.47);
+    }
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      width: vm(15);
+      background: #0982CA;
+    }
+  }
+}
