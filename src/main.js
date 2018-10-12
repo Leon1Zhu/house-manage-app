@@ -6,7 +6,8 @@ import router from './router';
 import MetaInfo from 'vue-meta-info';
 import './styles/reset.css';
 import './styles/styles.scss';
-
+import 'swiper/dist/css/swiper.css';
+import './styles/iconFont-symbol';
 Vue.use(MetaInfo)
 
 Vue.config.productionTip = false

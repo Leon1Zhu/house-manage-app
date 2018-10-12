@@ -3,8 +3,8 @@
  * 此scss用来定义全局变量以及全局的scss方法
  */
 
-$vw_base: 640;
+$vw_base: 375;
 
 @function vm($px) {
-  @return ($px / $vw_base) * 100vw;
+  @return ($px / $vw_base) * 100vmin;
 }

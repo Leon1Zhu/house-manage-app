@@ -10,7 +10,14 @@ html, body, #app {
   position: relative;
   width: 100%;
   height: 100%;
+  font-family: "MicrosoftYaHei";
 }
 
 
 
+.icon {
+  width: 16px; height: 16px;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
