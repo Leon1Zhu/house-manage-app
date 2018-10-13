@@ -2,3 +2,41 @@
   @author zhuliang
   @date 2018/10/8 下午11:58
 */
+@import '../../../styles/globalscss';
+
+.house-nav {
+  position: relative;
+  .nav-li {
+    height: vm(50);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: vm(50);
+    box-sizing: border-box;
+    padding: 0 0 0 vm(20);
+    display: inline-block;
+  }
+  .icon {
+    height: 18px;
+    width: 18px;
+  }
+  .firse-nav {
+    .nav-li {
+      width: vm(108);
+      background: #EAF9FF;
+    }
+    .nav-li:not(:first-child) {
+      margin-left: vm(10);
+    }
+  }
+
+  .second-nav {
+    margin-top: vm(10);
+    .nav-li {
+      width: vm(167);
+      border: vm(1) solid #20A7F8;
+    }
+    .nav-li:first-child {
+      margin-right: vm(10);
+    }
+  }
+}
