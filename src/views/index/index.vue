@@ -8,6 +8,7 @@
     <div class="introduce-content">
       <swiper-content></swiper-content>
       <nav-content></nav-content>
+      <highQualityHouse></highQualityHouse>
     </div>
   </section>
 </template>
@@ -17,6 +18,7 @@ import './index.scss';
 import header from './header/header';
 import swiper from './swiperContent/swiperContent';
 import nav from './nav/nav';
+import highQualityHouse from './highQualityHouse/highQualityHouse';
 
 export default {
   name: 'index',
@@ -27,6 +29,7 @@ export default {
     'house-header': header,
     'swiper-content': swiper,
     'nav-content': nav,
+    highQualityHouse,
   },
   created() {},
   mounted() {},

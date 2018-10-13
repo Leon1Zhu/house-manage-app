@@ -2,3 +2,42 @@
   @author zhuliang
   @date 2018/10/8 下午11:57
 */
+
+@import "../../../styles/globalscss";
+
+.high-quality-house {
+  h1 {
+    margin: vm(15) 0;
+  }
+  .swiper-container {
+    .swiper-wrapper {
+      .swiper-slide {
+        img {
+          width: 100%;
+        }
+        span {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .quality-name {
+          font-size: 13px;
+          margin-top: vm(5);
+        }
+        .quality-info {
+          font-size: 10px;
+          color: #858585;
+          margin-top: vm(9);
+        }
+        .quality-price {
+          font-size: 10px;
+          color: #FF0000;
+          font-weight: bold;
+          margin-top: vm(8);
+        }
+      }
+    }
+  }
+
+}
