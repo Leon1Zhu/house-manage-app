@@ -94,12 +94,15 @@
         this.scroll = new BScroll(this.$refs.wrapper, {
           probeType: this.probeType,
           click: this.click,
-          scrollX: this.scrollX
+          scrollX: this.scrollX,
+          stopPropagation: true,
+          pullUpLoad: true,
         })
 
         // 是否派发滚动事件
         if (this.listenScroll) {
           this.scroll.on('scroll', (pos) => {
+            console.log(111)
             this.$emit('scroll', pos)
           })
         }

@@ -5,11 +5,12 @@
 @import '../../styles/globalscss';
 .guess-like {
   h1 {
-    margin: vm(15) 0;
+    margin: vm(15) 0 vm(5) 0;
+    font-weight: 900;
   }
-  .wrapper {
     .content {
       .like-content {
+        margin-top: vm(10);
         border: 1px solid #979797;
         .text-content {
           padding: vm(10) vm(10);
@@ -42,5 +43,4 @@
         }
       }
     }
-  }
 }

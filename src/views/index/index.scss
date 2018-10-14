@@ -1,7 +1,12 @@
 @import '../../styles/globalscss';
 
 #index-content {
+  position: relative;
+  overflow: hidden;
   .introduce-content {
     padding: vm(10) vm(15) vm(20);
+  }
+  .wrapper {
+    height: calc(100vh - 14vmin);
   }
 }
