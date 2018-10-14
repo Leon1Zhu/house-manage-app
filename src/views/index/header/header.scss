@@ -5,6 +5,7 @@
 @import '../../../styles/globalscss.scss';
 
 .house-header {
+  position: relative;
   z-index: 100;
   height: vm(44);
   display: flex;

@@ -116,7 +116,6 @@
             }
           })
         }
-
         // 是否派发顶部下拉事件，用于下拉刷新
         if (this.pulldown) {
           this.scroll.on('touchend', (pos) => {
