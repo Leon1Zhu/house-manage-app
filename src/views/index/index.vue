@@ -9,6 +9,7 @@
       <swiper-content></swiper-content>
       <nav-content></nav-content>
       <highQualityHouse></highQualityHouse>
+      <guess-like></guess-like>
     </div>
   </section>
 </template>
@@ -19,6 +20,7 @@ import header from './header/header';
 import swiper from './swiperContent/swiperContent';
 import nav from './nav/nav';
 import highQualityHouse from './highQualityHouse/highQualityHouse';
+import guessLike from '../../components/guessLike/guessLike';
 
 export default {
   name: 'index',
@@ -30,6 +32,7 @@ export default {
     'swiper-content': swiper,
     'nav-content': nav,
     highQualityHouse,
+    'guess-like': guessLike,
   },
   created() {},
   mounted() {},

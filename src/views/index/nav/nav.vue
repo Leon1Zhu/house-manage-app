@@ -27,7 +27,7 @@
 import './nav.scss';
 
 export default {
-  name: 'nav',
+  name: 'nav-content',
   data() {
     return {
       firstNav: [

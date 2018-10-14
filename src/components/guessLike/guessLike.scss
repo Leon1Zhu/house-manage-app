@@ -2,3 +2,45 @@
   @author zhuliang
   @date 2018/10/8 下午11:58
 */
+@import '../../styles/globalscss';
+.guess-like {
+  h1 {
+    margin: vm(15) 0;
+  }
+  .wrapper {
+    .content {
+      .like-content {
+        border: 1px solid #979797;
+        .text-content {
+          padding: vm(10) vm(10);
+          .name-price {
+            display: flex;
+            margin-bottom: vm(10);
+            span {
+              display: inline-block;
+            }
+            .temp-span {
+              flex: 1;
+            }
+            .name {
+              font-size: 16px;
+              color: #000000;
+              font-weight: 900;
+            }
+            .price {
+              font-weight: 900;
+              color: #FF0000;
+              font-size: 13px;
+            }
+          }
+          .region, .house-type {
+            margin-top: vm(7);
+            display: block;
+            color: #979797;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}

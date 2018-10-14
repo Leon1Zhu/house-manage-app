@@ -100,7 +100,8 @@ export default {
       swiperOptionValue: {
         slidesPerView: 3,
         spaceBetween: 15,
-      }
+      },
+
     };
   },
   computed: {
@@ -113,7 +114,8 @@ export default {
     swiperSlide
   },
   created() {},
-  mounted() {},
+  mounted() {
+  },
   methods: {},
 };
 </script>
