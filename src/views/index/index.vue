@@ -17,7 +17,7 @@
             <nav-content></nav-content>
           </li>
           <li class="like-content" >
-            <highQualityHouse></highQualityHouse>
+            <highQualityHouse></highQualityHouse>s
           </li>
           <li class="like-content" >
             <guess-like></guess-like>

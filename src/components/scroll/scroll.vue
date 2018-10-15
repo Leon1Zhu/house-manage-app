@@ -97,12 +97,12 @@
           scrollX: this.scrollX,
           stopPropagation: true,
           pullUpLoad: true,
+          useTransition:false,  // 防止iphone微信滑动卡顿
         })
 
         // 是否派发滚动事件
         if (this.listenScroll) {
           this.scroll.on('scroll', (pos) => {
-            console.log(111)
             this.$emit('scroll', pos)
           })
         }
