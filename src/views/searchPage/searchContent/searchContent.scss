@@ -17,7 +17,7 @@
       background: white;
       width: vm(345);
       height: vm(32);
-      margin-left: vm(15);
+      margin-left: vm($padding-width);
       display: flex;
       align-items: center;
       .area {
@@ -59,6 +59,29 @@
   .mu-tsransition-box {
     background: white;
     color: #333333;
+  }
+  .seach-isselect-condition {
+    display: flex;
+    padding: 0 vm($padding-width);
+    li {
+      .mu-chip.demo-chip {
+        border-radius: 0;
+        background: #EAEAEA;
+        height: vm(23);
+        font-size: 12px;
+        .mu-chip-delete-icon {
+          height: vm(20);
+          width: vm(20);
+        }
+      }
+    }
+
+    li:not(:last-child) {
+      margin-right: vm(10);
+    }
+  }
+  .seach-isselect-condition {
+    margin-top: vm($padding-width);
   }
 }
 

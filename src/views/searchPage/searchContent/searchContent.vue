@@ -29,7 +29,7 @@
 
     <div class="search-info-content">
       <ul class="search-info-list">
-        <li v-for="item in searchConfig" @click="show = !show">
+        <li v-for="item in searchConfig" @click="showSelect(item.field)">
           <span class="search-info-name">{{item.name}}</span>
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-arrowdown-copy"></use>
@@ -37,16 +37,20 @@
         </li>
       </ul>
     </div>
-    <mu-expand-transition>
-      <div v-show="show">
-        <div class="mu-tsransition-box mu-primary-color mu-inverse" >mu-expand-transition</div>
-      </div>
-    </mu-expand-transition>
+    <transition-page :show="show" :searchItem="searchItem" :searchSelectObj="searchSelectObj" @searchData="searchData"></transition-page>
+    <ul class="seach-isselect-condition">
+      <li v-for="(item, index) in searchSelectObj">
+        <mu-chip class="demo-chip" @delete="deleteSearchCondition(index)" delete>
+          {{item.data}}
+        </mu-chip>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 import './searchContent.scss';
+import transtion from './transitionPage/transitionPage';
 
 export default {
   name: 'search-content',
@@ -54,6 +58,8 @@ export default {
     return {
       area: '南京',
       show: false,
+      searchItem: 'regin',
+      searchSelectObj: {},
       searchConfig: [
         {
           name: '区域',
@@ -64,13 +70,14 @@ export default {
           field: 'price',
         },
         {
+          name: '类型',
+          field: 'building_type',
+        },
+        {
           name: '户型',
           field: 'house_type',
         },
-        {
-          name: '面积',
-          field: 'area',
-        },
+
         {
           name: '特色',
           field: 'characteristic',
@@ -78,10 +85,50 @@ export default {
       ],
     };
   },
-  components: {},
+  components: {
+    'transition-page': transtion,
+  },
   created() {},
   mounted() {
   },
-  methods: {},
+  methods: {
+    showSelect(field) {
+      if (this.searchItem === field ) {
+        if (field === 'price') {
+
+        }else {
+          this.show = !this.show;
+          this.searchItem = field;
+        }
+      } else {
+        if (field === 'price') {
+
+        } else {
+          this.show = true;
+          this.searchItem = field;
+        }
+      }
+    },
+    searchData(parindex, childIndex, data) {
+      this.show = false;
+      this.searchSelectObj[this.searchItem] = {
+        index: parindex,
+        childIndex: childIndex,
+        data: data,
+      }
+      // TODO 刷新数据
+      this.refreshData();
+    },
+    deleteSearchCondition(item) {
+      let tempValue = JSON.parse(JSON.stringify(this.searchSelectObj));
+      delete tempValue[item];
+      this.searchSelectObj = tempValue;
+      // TODO 刷新数据
+      this.refreshData();
+    },
+    refreshData() {
+
+    },
+  },
 };
 </script>

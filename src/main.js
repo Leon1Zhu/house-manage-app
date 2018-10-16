@@ -12,7 +12,7 @@ import 'swiper/dist/css/swiper.css';
 import './styles/iconFont-symbol';
 
 
-import { Button, Select, TextField, Icon, ExpansionPanel } from 'muse-ui';
+import { Button, Select, TextField, Icon, ExpansionPanel, chip } from 'muse-ui';
 import Helpers from 'muse-ui/lib/Helpers';
 
 Vue.use(Helpers);
@@ -23,7 +23,8 @@ Vue.use(Select);
 Vue.use(TextField);
 Vue.use(Icon);
 Vue.use(ExpansionPanel);
-Vue.use(MetaInfo)
+Vue.use(MetaInfo);
+Vue.use(chip);
 
 Vue.config.productionTip = false
 
