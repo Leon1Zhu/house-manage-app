@@ -16,6 +16,7 @@
     text-align: center;
     li {
       padding: vm(8) 0;
+      color: rgba(0, 0, 0, .55);
       & span.active {
         position: relative;
         color: #ffa000;

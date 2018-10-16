@@ -5,6 +5,18 @@
 @import '../../../styles/globalscss';
 
 #search-content {
+  position: relative;
+  &.border-class:after {
+    content: ' ';
+    width: 92%;
+    margin-left: 4%;
+    height: vm(1);
+    background: #EAEAEA;
+    position: absolute;
+    bottom: vm(-15);
+    margin: 0 vm(15) ;
+    z-index: -1;
+  }
   .search-top-img-content {
     background: url("../../../assets/searchBG.png");
     height: vm(90);
@@ -45,7 +57,8 @@
 
   .search-info-content {
     margin-top: vm(30);
-    padding: 0 vm(10);
+    padding: 0 vm(10) vm(15);
+    border-bottom: vm(1) solid rgba(126, 125, 125, .27);
     .search-info-list {
       display: flex;
       li {
@@ -63,6 +76,7 @@
   .seach-isselect-condition {
     display: flex;
     padding: 0 vm($padding-width);
+    margin-top: vm($padding-width);
     li {
       .mu-chip.demo-chip {
         border-radius: 0;
@@ -79,9 +93,6 @@
     li:not(:last-child) {
       margin-right: vm(10);
     }
-  }
-  .seach-isselect-condition {
-    margin-top: vm($padding-width);
   }
 }
 

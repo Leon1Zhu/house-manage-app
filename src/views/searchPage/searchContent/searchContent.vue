@@ -3,7 +3,7 @@
   @date 2018/10/16 上午10:41
 -->
 <template>
-  <div id="search-content">
+  <div id="search-content" :class="{'border-class' : Object.keys(searchSelectObj).length > 0}">
     <div class="search-top-img-content">
       <div class="search-input-content">
         <div class="area">
@@ -38,7 +38,7 @@
       </ul>
     </div>
     <transition-page :show="show" :searchItem="searchItem" :searchSelectObj="searchSelectObj" @searchData="searchData"></transition-page>
-    <ul class="seach-isselect-condition">
+    <ul class="seach-isselect-condition" >
       <li v-for="(item, index) in searchSelectObj">
         <mu-chip class="demo-chip" @delete="deleteSearchCondition(index)" delete>
           {{item.data}}
