@@ -12,6 +12,7 @@ html, body, #app {
   height: 100%;
   font-family: "MicrosoftYaHei";
   overflow: hidden;
+  background: #FFFFFF;
 }
 
 
@@ -21,4 +22,12 @@ html, body, #app {
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
+}
+
+.mu-input {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  height: 100%;
+  min-height: 100%;
 }

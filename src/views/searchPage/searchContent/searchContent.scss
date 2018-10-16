@@ -1,0 +1,64 @@
+/**
+  @author zhuliang
+  @date 2018/10/16 上午10:42
+*/
+@import '../../../styles/globalscss';
+
+#search-content {
+  .search-top-img-content {
+    background: url("../../../assets/searchBG.png");
+    height: vm(90);
+    position: relative;
+    .search-input-content {
+      position: absolute;
+      bottom: vm(-16);
+      border: vm(1) solid #E6E6E6;
+      padding: vm(5) vm(10);
+      background: white;
+      width: vm(345);
+      height: vm(32);
+      margin-left: vm(15);
+      display: flex;
+      align-items: center;
+      .area {
+        position: relative;
+        display: flex;
+        width: vm(150);
+        font-family: PingFangSC;
+        font-size: 12px;
+        align-items: center;
+      }
+      .area:after {
+        content: ' ';
+        height: 100%;
+        width: vm(1);
+        background: #979797;
+        opacity: .2;
+        position: absolute;
+        right: 0;
+      }
+      .search-icon {
+        width: vm(60);
+      }
+    }
+  }
+
+  .search-info-content {
+    margin-top: vm(30);
+    padding: 0 vm(10);
+    .search-info-list {
+      display: flex;
+      li {
+        text-align: center;
+        flex: 1;
+        color: #333333;
+        font-size: 16px;
+      }
+    }
+  }
+  .mu-tsransition-box {
+    background: white;
+    color: #333333;
+  }
+}
+

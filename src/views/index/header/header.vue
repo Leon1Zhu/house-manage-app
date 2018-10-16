@@ -12,7 +12,7 @@
     </div>
 
     <h1>华云庭</h1>
-    <svg class="icon" aria-hidden="true">
+    <svg class="icon" aria-hidden="true" @click="push('/search')">
       <use xlink:href="#icon-chaxun"></use>
     </svg>
 
@@ -30,6 +30,10 @@ export default {
   components: {},
   created() {},
   mounted() {},
-  methods: {},
+  methods: {
+    push(route) {
+      this.$router.push({ path: route });
+    }
+  },
 };
 </script>
