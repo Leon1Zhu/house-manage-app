@@ -1,0 +1,18 @@
+@import '../../styles/globalscss';
+
+.housingImg {
+    width: vm(375);
+    height:vm(229);
+}
+.housingType {
+    margin-top: vm(17);
+}
+.buttonType {
+    width: vm(40);
+    height: vm(17);
+    background-color: #0284DC;
+    border-radius: vm(1);
+    font-size: 12px ;
+    color: #0284DC;
+    opacity: 12.18%;
+}
