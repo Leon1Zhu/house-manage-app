@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 // 预览界面
 const index = () => import('@/views/index/index.vue');
 
@@ -12,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
+    },
+    {
+      path: '/housing-estate',
+      name: 'housingEstate',
+      component: () => import('@/views/housingEstate/index.vue')
     }
   ]
 })
