@@ -77,11 +77,6 @@ export default {
           name: '户型',
           field: 'house_type',
         },
-
-        {
-          name: '特色',
-          field: 'characteristic',
-        },
       ],
     };
   },
