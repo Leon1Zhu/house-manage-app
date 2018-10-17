@@ -6,6 +6,9 @@ const index = () => import('@/views/index/index.vue');
 // 搜索页面
 const search = () => import('@/views/searchPage/index/index.vue');
 
+// 小区住宅展示页面
+const housingEstate = () => import('@/views/housingEstate/index.vue');
+
 Vue.use(Router)
 
 export default new Router({
@@ -22,14 +25,9 @@ export default new Router({
       component: search
     },
     {
-      path: '/search',
-      name: 'search',
-      component: search
-    },
-    {
       path: '/housing-estate',
       name: 'housingEstate',
-      component: () => import('@/views/housingEstate/index.vue')
+      component: housingEstate
     }
   ]
 })
