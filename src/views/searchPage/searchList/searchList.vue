@@ -5,7 +5,7 @@
 <template>
   <div id="search-list">
     <ul class="search-house-list">
-      <li>
+      <li class="search-house-content">
 
       </li>
     </ul>
