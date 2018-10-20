@@ -13,7 +13,6 @@
     height: vm(1);
     background: #EAEAEA;
     position: absolute;
-    bottom: vm(-15);
     margin: 0 vm(15) ;
     z-index: -1;
   }
@@ -75,7 +74,7 @@
   }
   .seach-isselect-condition {
     display: flex;
-    padding: 0 vm($padding-width);
+    padding: 0 vm($padding-width) vm(15);
     margin-top: vm($padding-width);
     li {
       .mu-chip.demo-chip {
