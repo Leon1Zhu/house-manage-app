@@ -4,7 +4,9 @@
 -->
 <template>
   <div ref="wrapper">
+    <p class="drop-down" v-if="dropDown">松手刷新数据...</p>
     <slot></slot>
+    <p class="drop-up" v-if="dropup">加载更多...</p>
   </div>
 </template>
 
@@ -79,6 +81,12 @@
         default: 20
       }
     },
+    data(){
+      return {
+        dropDown: false,
+        dropup: false,
+      }
+    },
     mounted() {
       // 保证在DOM渲染完毕后初始化better-scroll
       setTimeout(() => {
@@ -97,21 +105,36 @@
           scrollX: this.scrollX,
           stopPropagation: true,
           pullUpLoad: true,
-          useTransition:false,  // 防止iphone微信滑动卡顿
+          useTransition: false,  // 防止iphone微信滑动卡顿
         })
 
         // 是否派发滚动事件
-        if (this.listenScroll) {
           this.scroll.on('scroll', (pos) => {
             this.$emit('scroll', pos)
+            //如果下拉超过50px 就显示下拉刷新的文字
+            if(pos.y> 40){
+              this.dropDown = true
+            }else{
+              this.dropDown = false
+            }
+
+            if(this.scroll.maxScrollY > pos.y + 40){
+              this.dropup = true;
+            }else{
+              this.dropup = false
+            }
+
           })
-        }
 
         // 是否派发滚动到底部事件，用于上拉加载
         if (this.pullup) {
-          this.scroll.on('scrollEnd', () => {
+          this.scroll.on('scrollEnd', (pos) => {
+            // 下拉动作
+            if(pos.y > 40){
+              this.dropDown = false
+            }
             // 滚动到底部
-            if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
+            if (this.scroll.y <= (this.scroll.maxScrollY + 40)) {
               this.$emit('scrollToEnd')
             }
           })
@@ -120,8 +143,12 @@
         if (this.pulldown) {
           this.scroll.on('touchend', (pos) => {
             // 下拉动作
-            if (pos.y > 50) {
+            if (pos.y > 40) {
               this.$emit('pulldown')
+            }
+
+            if(this.scroll.maxScrollY > pos.y + 40){
+              this.$emit('pullup');
             }
           })
         }
@@ -164,3 +191,24 @@
     }
   }
 </script>
+
+
+ <style scoped>
+   .drop-down, .drop-up{
+     position: absolute;
+     left:0px;
+     width: 100%;
+     height: 50px;
+     line-height:50px;
+     text-align: center;
+     font-size:14px;
+     color:#CCC;
+   }
+   .drop-down {
+     top: 0;
+   }
+
+   .drop-up {
+     bottom: 3px;
+   }
+ </style>

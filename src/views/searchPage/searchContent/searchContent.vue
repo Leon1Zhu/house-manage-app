@@ -15,7 +15,7 @@
         <div class="search-input">
           <div class="mu-input ">
             <div class="mu-text-field mu-input-content">
-            <input tabindex="0" class="mu-text-field-input">
+            <input v-model="searchSelectObj.houseName" tabindex="0" class="mu-text-field-input" placeholder="楼盘名称搜索" @input ="inputFunc">
             </div>
           </div>
         </div>
@@ -52,14 +52,18 @@
 import './searchContent.scss';
 import transtion from './transitionPage/transitionPage';
 
+let timer;
 export default {
   name: 'search-content',
   data() {
     return {
+      index: 0,
+      length: 7,
       area: '南京',
       show: false,
       searchItem: 'regin',
-      searchSelectObj: {},
+      searchSelectObj: {
+      },
       searchConfig: [
         {
           name: '区域',
@@ -89,19 +93,11 @@ export default {
   methods: {
     showSelect(field) {
       if (this.searchItem === field ) {
-        if (field === 'price') {
-
-        }else {
-          this.show = !this.show;
-          this.searchItem = field;
-        }
+        this.show = !this.show;
+        this.searchItem = field;
       } else {
-        if (field === 'price') {
-
-        } else {
-          this.show = true;
-          this.searchItem = field;
-        }
+        this.show = true;
+        this.searchItem = field;
       }
     },
     searchData(parindex, childIndex, data) {
@@ -123,6 +119,11 @@ export default {
     },
     refreshData() {
 
+    },
+    inputFunc() {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+      },800)
     },
   },
 };

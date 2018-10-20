@@ -8,7 +8,9 @@
     <div class="introduce-content">
       <scroll class="wrapper"
               :pulldown="true"
-              @pulldown="loadData()">
+              :pullUpLoad="true"
+              @pulldown="refreshData()"
+              @pullup="loadData()">
         <ul class="content">
           <li class="like-content" >
             <swiper-content></swiper-content>
@@ -17,13 +19,13 @@
             <nav-content></nav-content>
           </li>
           <li class="like-content" >
-            <highQualityHouse></highQualityHouse>s
+            <highQualityHouse></highQualityHouse>
           </li>
           <li class="like-content" >
             <guess-like></guess-like>
           </li>
         </ul>
-        <div class="loading-wrapper"></div>
+        <div class="loading-wrapper">111111</div>
       </scroll>
     </div>
   </section>
@@ -54,11 +56,15 @@ export default {
     'guess-like': guessLike,
   },
   created() {},
-  mounted() {},
+  mounted() {
+  },
   methods: {
     loadData() {
-      console.log(1111)
+      alert(1111)
     },
+    refreshData() {
+
+    }
   },
 };
 </script>
