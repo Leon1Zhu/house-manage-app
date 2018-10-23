@@ -51,6 +51,7 @@
 <script>
 import './searchContent.scss';
 import transtion from './transitionPage/transitionPage';
+import searchApi from '../../../api/searchPage';
 
 let timer;
 export default {
@@ -58,7 +59,7 @@ export default {
   data() {
     return {
       index: 0,
-      length: 7,
+      length: 10,
       area: '南京',
       show: false,
       searchItem: 'regin',
@@ -87,7 +88,9 @@ export default {
   components: {
     'transition-page': transtion,
   },
-  created() {},
+  created() {
+    this.refreshData();
+  },
   mounted() {
   },
   methods: {
@@ -118,7 +121,9 @@ export default {
       this.refreshData();
     },
     refreshData() {
+      searchApi.getSelectedHouse(this.searchSelectObj, this.index, this.length).then((response) => {
 
+      })
     },
     inputFunc() {
       clearTimeout(timer);

@@ -45,7 +45,7 @@ export default {
   name: 'index',
   data() {
     return {
-      index: 0,
+      index: 1,
       pagesize: 10,
     };
   },
@@ -72,6 +72,8 @@ export default {
       alert(1111);
     },
     refreshData() {
+      this.index = 0;
+      this.initGuessLikeData();
     }
   },
 };
