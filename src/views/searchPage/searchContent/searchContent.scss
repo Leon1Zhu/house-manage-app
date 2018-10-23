@@ -76,6 +76,7 @@
     display: flex;
     padding: 0 vm($padding-width) vm(15);
     margin-top: vm($padding-width);
+    overflow: auto;
     li {
       .mu-chip.demo-chip {
         border-radius: 0;

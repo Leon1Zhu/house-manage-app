@@ -25,7 +25,6 @@
             <guess-like></guess-like>
           </li>
         </ul>
-        <div class="loading-wrapper">111111</div>
       </scroll>
     </div>
   </section>
@@ -39,12 +38,15 @@ import swiper from './swiperContent/swiperContent';
 import nav from './nav/nav';
 import highQualityHouse from './highQualityHouse/highQualityHouse';
 import guessLike from '../../components/guessLike/guessLike';
+import indexApi from '../../api/indexPage';
 
 
 export default {
   name: 'index',
   data() {
     return {
+      index: 0,
+      pagesize: 10,
     };
   },
   components: {
@@ -55,15 +57,21 @@ export default {
     highQualityHouse,
     'guess-like': guessLike,
   },
-  created() {},
+  created() {
+    this.initGuessLikeData();
+  },
   mounted() {
   },
   methods: {
+    initGuessLikeData() {
+      indexApi.getLikeHouse(this.index, this.pagesize).then((response) => {
+
+      }).catch(() => {});
+    },
     loadData() {
-      alert(1111)
+      alert(1111);
     },
     refreshData() {
-
     }
   },
 };

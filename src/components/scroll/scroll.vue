@@ -3,15 +3,19 @@
   @date 2018/10/14 下午10:42
 -->
 <template>
-  <div ref="wrapper">
+  <div ref="wrapper" class="scroll-content">
     <p class="drop-down" v-if="dropDown">松手刷新数据...</p>
     <slot></slot>
-    <p class="drop-up" v-if="dropup">加载更多...</p>
+    <p class="drop-up" v-if="dropup">
+      <mu-circular-progress class="demo-circular-progress" :size="24"></mu-circular-progress>
+      <span>松手加载更多</span>
+    </p>
   </div>
 </template>
 
 <script>
-  import BScroll from 'better-scroll'
+  import BScroll from 'better-scroll';
+  import './scroll.scss';
 
   export default {
     props: {
