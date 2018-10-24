@@ -8,7 +8,9 @@
     <div class="introduce-content">
       <scroll class="wrapper"
               :pulldown="true"
-              @pulldown="loadData()">
+              :pullUpLoad="true"
+              @pulldown="refreshData()"
+              @pullup="loadData()">
         <ul class="content">
           <li class="like-content" >
             <swiper-content></swiper-content>
@@ -17,13 +19,12 @@
             <nav-content></nav-content>
           </li>
           <li class="like-content" >
-            <highQualityHouse></highQualityHouse>s
+            <highQualityHouse></highQualityHouse>
           </li>
           <li class="like-content" >
             <guess-like></guess-like>
           </li>
         </ul>
-        <div class="loading-wrapper"></div>
       </scroll>
     </div>
   </section>
@@ -37,12 +38,15 @@ import swiper from './swiperContent/swiperContent';
 import nav from './nav/nav';
 import highQualityHouse from './highQualityHouse/highQualityHouse';
 import guessLike from '../../components/guessLike/guessLike';
+import indexApi from '../../api/indexPage';
 
 
 export default {
   name: 'index',
   data() {
     return {
+      index: 1,
+      pagesize: 10,
     };
   },
   components: {
@@ -53,12 +57,24 @@ export default {
     highQualityHouse,
     'guess-like': guessLike,
   },
-  created() {},
-  mounted() {},
+  created() {
+    this.initGuessLikeData();
+  },
+  mounted() {
+  },
   methods: {
-    loadData() {
-      console.log(1111)
+    initGuessLikeData() {
+      indexApi.getLikeHouse(this.index, this.pagesize).then((response) => {
+
+      }).catch(() => {});
     },
+    loadData() {
+      alert(1111);
+    },
+    refreshData() {
+      this.index = 0;
+      this.initGuessLikeData();
+    }
   },
 };
 </script>

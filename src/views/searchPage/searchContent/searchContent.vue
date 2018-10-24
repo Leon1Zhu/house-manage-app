@@ -15,7 +15,7 @@
         <div class="search-input">
           <div class="mu-input ">
             <div class="mu-text-field mu-input-content">
-            <input tabindex="0" class="mu-text-field-input">
+            <input v-model="searchSelectObj.houseName" tabindex="0" class="mu-text-field-input" placeholder="楼盘名称搜索" @input ="inputFunc">
             </div>
           </div>
         </div>
@@ -51,15 +51,20 @@
 <script>
 import './searchContent.scss';
 import transtion from './transitionPage/transitionPage';
+import searchApi from '../../../api/searchPage';
 
+let timer;
 export default {
   name: 'search-content',
   data() {
     return {
+      index: 0,
+      length: 10,
       area: '南京',
       show: false,
       searchItem: 'regin',
-      searchSelectObj: {},
+      searchSelectObj: {
+      },
       searchConfig: [
         {
           name: '区域',
@@ -77,36 +82,25 @@ export default {
           name: '户型',
           field: 'house_type',
         },
-
-        {
-          name: '特色',
-          field: 'characteristic',
-        },
       ],
     };
   },
   components: {
     'transition-page': transtion,
   },
-  created() {},
+  created() {
+    this.refreshData();
+  },
   mounted() {
   },
   methods: {
     showSelect(field) {
       if (this.searchItem === field ) {
-        if (field === 'price') {
-
-        }else {
-          this.show = !this.show;
-          this.searchItem = field;
-        }
+        this.show = !this.show;
+        this.searchItem = field;
       } else {
-        if (field === 'price') {
-
-        } else {
-          this.show = true;
-          this.searchItem = field;
-        }
+        this.show = true;
+        this.searchItem = field;
       }
     },
     searchData(parindex, childIndex, data) {
@@ -127,7 +121,14 @@ export default {
       this.refreshData();
     },
     refreshData() {
+      searchApi.getSelectedHouse(this.searchSelectObj, this.index, this.length).then((response) => {
 
+      })
+    },
+    inputFunc() {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+      },800)
     },
   },
 };
