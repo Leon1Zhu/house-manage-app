@@ -1,0 +1,34 @@
+
+@import "../../../styles/globalscss";
+
+.housing-estate-name {
+    line-height: vm(27);
+    border-bottom:  vm(1) solid rgba(126, 125, 125, 0.27);
+    padding-bottom: 20px;
+    span {
+        font-size: vm(26);
+        color: #333333;
+        line-height: vm(27);
+        letter-spacing:vm(1);
+        font-weight: 600;
+    }
+    h4 {
+        color: #858585;
+        font-size: vm(16);
+        line-height: vm(23);
+        
+    }
+    .house-price {
+        margin-top: 10px;
+        strong {
+            color: #ff0000;
+        }
+    }
+    .house-open-sale {
+        span {
+            color: #333333;
+            font-size: vm(16);
+            font-weight: 500;
+        }
+    }
+}

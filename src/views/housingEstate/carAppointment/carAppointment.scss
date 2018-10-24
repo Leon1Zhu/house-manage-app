@@ -1,0 +1,12 @@
+@import "../../../styles/globalscss";
+
+.free-professional-transfer {
+    border-bottom:  vm(1) solid rgba(126, 125, 125, 0.27);
+    padding-bottom: 20px;
+    .free-car {
+        font-size: vm(16);
+        color: #333333;
+        font-weight: 600;
+        line-height: vm(23);
+    }
+}

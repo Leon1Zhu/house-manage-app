@@ -1,0 +1,24 @@
+@import "../../../styles/globalscss";
+
+.housing-estate-more {
+    border-bottom:  vm(1) solid rgba(126, 125, 125, 0.27);
+    padding-bottom: 20px;
+    .housing-estate-activity {
+        background-color: #FFDBD7;
+        height: vm(40);
+    }
+    .more-housing-estate {
+        width: 100%;
+        height: vm(45);
+        margin-top: vm(20);
+        background-color: #E0F0FB;
+        text-align: center;
+        padding-top: vm(14);
+        span {
+            font-size: vm(16);
+            color: #0284DC;
+            font-weight: 600;
+        }
+    }
+}
+

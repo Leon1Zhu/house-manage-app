@@ -1,6 +1,34 @@
 @import '../../../styles/globalscss';
 
 .housing-estate-nav {
-    position: relative;
-    
+    .nav-ul {
+        li {
+            width: vm(40);
+            height: vm(17);
+            line-height: vm(17);
+            border-radius: 1px;
+            background-color: rgba($color: #0284DC, $alpha: 0.1218);
+            display: inline-block;
+            font-size: vm(12);
+            span {
+                width: vm(30);
+                height: vm(12);
+                margin-left: vm(8);
+                margin-top: vm(2);
+                margin-bottom: vm(4);
+            }
+        }
+        .nav-onsale-li {
+            margin-right: vm(10);
+            .nav-name {
+                color: #0284DC;
+            }
+        }
+        .nav-residence-li {
+            .nav-name {
+                color: #2E9E8B;
+            }
+
+        }
+    }
 }

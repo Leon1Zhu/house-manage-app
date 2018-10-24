@@ -7,11 +7,11 @@
 <template>
   <div class="housing-estate-nav">
     <ul class="nav-ul">
-      <li class="nav-li">
-
+      <li class="nav-onsale-li">
+        <span class="nav-name">在售</span>
       </li>
-      <li class="nav-li">
-
+      <li class="nav-residence-li">
+        <span class="nav-name">住宅</span>
       </li>
     </ul>
   </div>
@@ -23,37 +23,7 @@ import './nav.scss';
 export default {
   name: 'housing-estate-nav',
   data() {
-    return {
-      firstNav: [
-        {
-          name: '住宅',
-          icon: 'icon-zhuzhai',
-          link: '',
-        },
-        {
-          name: '商铺',
-          icon: 'icon-shangpu',
-          link: '',
-        },
-        {
-          name: '公寓',
-          icon: 'icon-gongyu',
-          link: '',
-        },
-      ],
-      sedondNav: [
-        {
-          name: '写字楼',
-          icon: 'icon-xiezilou',
-          link: '',
-        },
-        {
-          name: '优质房源',
-          icon: 'icon-youzhifangyuan',
-          link: '',
-        },
-      ],
-    };
+    return {};
   },
   components: {},
   created() {

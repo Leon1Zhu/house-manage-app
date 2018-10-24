@@ -4,40 +4,25 @@
   @desc 住宅小区房型，行情介绍（第三张图）
 -->
 <template>
-    <div>
-      <!-- 住宅图片展示 -->
-      <div>
-        <img src="../../assets/guessLike.png" class="housingImg"/>
-      </div>
-      <!-- 住宅图片展示 -->
-      <div class="housingType">
-        <div class="buttonType">在售</div>
-        <button>住宅</button>
-      </div>
-      <div>
-        <housing-estate-nav></housing-estate-nav>
-      </div>
-    </div>
-    
+  <section id="index-content">
+    <div class="house-page"></div>
+    <div class="house-page1"></div>
+  </section>
 </template>
 
 <script>
-import './index.scss';
-import HousingEstateNnav from './nav/nav';
+import "./index.scss";
 
 export default {
-  name: 'housingEstate',
+  name: "index",
   data() {
-    return {
-    };
+    return {};
   },
   components: {
-    'housing-estate-nav': HousingEstateNnav
+   
   },
   created() {},
   mounted() {},
-  methods: {
-  },
+  methods: {}
 };
-
 </script>

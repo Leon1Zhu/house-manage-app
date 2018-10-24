@@ -1,0 +1,52 @@
+@import "../../../styles/globalscss";
+
+.swiper-option {
+    position: relative;
+    width: 100%;
+    .back {
+      width: vm(14);
+      height: vm(13);
+      position: absolute;
+      z-index: 1000;
+      color: #ffffff;
+      margin-top: vm(10);
+      margin-left: vm(10);
+    }
+    .icon {
+      width: 100%;
+    }
+    .swiper-slides {
+      .housingImg {
+        width: 100%;
+        height:vm(229);
+        img {
+          width: 100%;
+          height:vm(229);
+        }
+      }
+    }
+    .total-pages {
+      width: 100%;
+      height: vm(20);
+      position: absolute;
+      margin-top: vm(-35);
+      
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      div {
+        width: vm(60);
+        height: vm(20);
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        border-radius: 1px;
+        color: #ffffff;
+        line-height: vm(14);
+        margin-right: vm(15);
+        span {
+          font-size: vm(10);
+          margin-left: vm(14);
+        }
+      }
+    }
+}
