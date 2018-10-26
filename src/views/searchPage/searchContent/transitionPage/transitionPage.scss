@@ -7,6 +7,7 @@
 $selectedColor:#ffa000;
 
 .search-transition-page {
+  z-index: 100;
   margin-top: vm($padding-width);
   position: absolute;
   width: 100%;

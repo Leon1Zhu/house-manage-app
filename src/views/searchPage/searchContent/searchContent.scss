@@ -74,8 +74,7 @@
   }
   .seach-isselect-condition {
     display: flex;
-    padding: 0 vm($padding-width) vm(15);
-    margin-top: vm($padding-width);
+    padding: vm(8) vm($padding-width) vm(8);
     overflow: auto;
     li {
       .mu-chip.demo-chip {
