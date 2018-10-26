@@ -4,6 +4,78 @@
 */
 @import '../../../styles/globalscss';
 
-.search-list {
-
+#search-list {
+  width: 100%;
+  position: relative;
+  padding: 0 vm($padding-width);
+  .search-house-list {
+    .search-house-content {
+      border-top: 1px solid rgba(126, 125, 125, .27);
+      padding: vm(10) 0;
+      display: flex;
+      .left-content {
+        width: 40%;
+        img {
+          width: 100%;
+        }
+        .car-realy {
+          .icon {
+            color: #228cdd;
+          }
+          span {
+            display: inline-block;
+            color: rgba(51,51,51,.59);
+            margin-top: vm(10);
+            font-size: 10px;
+          }
+        }
+      }
+      .right-content {
+        padding-left: vm(10);
+        width: 60%;
+        h1 {
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .house-ts {
+          margin-top: vm(8);
+          font-size: 11px;
+          color: #333333;
+        }
+        .other-infos {
+          margin-top: vm(8);
+          font-size: 10px;
+          color: rgba(51,51,51,.59);
+          & span:not(:first-child) {
+            margin-left: vm(5);
+          }
+        }
+        .tel-content {
+          margin-top: vm(8);
+        }
+        .mu-button {
+          width: vm(55);
+          height: vm(30);
+          font-size: 14px;
+          font-family: PingFangSC;
+        }
+        .price-area {
+          margin-top: vm(8);
+          .price {
+            font-size: 13px;
+            color: #FF0000;
+          }
+          .area {
+            margin-left: vm(9);
+            color: rgba(51,51,51,.59);
+            font-size: 10px;
+          }
+        }
+      }
+      &:last-child {
+        border-bottom: 1px solid rgba(126, 125, 125, .27);
+      }
+    }
+  }
 }
