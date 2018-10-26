@@ -6,7 +6,18 @@
     .free-car {
         font-size: vm(16);
         color: #333333;
-        font-weight: 600;
         line-height: vm(23);
+        span {
+            font-weight: 600;
+        }
+    }
+    .appointment-count {
+        font-size: vm(10);
+        color: #858585;
+        line-height: vm(16);
+        margin-top: vm(10);
+        span {
+            color: #ff0000;
+        }
     }
 }

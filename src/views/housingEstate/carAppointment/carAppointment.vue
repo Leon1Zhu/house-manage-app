@@ -9,7 +9,7 @@
         <span>免费专业接送看房</span>
     </div>
     <div class="appointment-count">
-      <span>限时免费专车全程</span>
+      限时免费专车全城看房，已有<span>190</span>人预约
     </div>
   </div>
 </template>

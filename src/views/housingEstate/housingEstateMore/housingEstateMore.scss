@@ -5,7 +5,26 @@
     padding-bottom: 20px;
     .housing-estate-activity {
         background-color: #FFDBD7;
+        width: vm(345);
         height: vm(40);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+        .activity_left {
+            width: vm(20);
+            background: green;
+            height: vm(40);
+        }
+        .activity_center {
+            width: vm(305);
+            height: vm(40);
+        }
+        .activity_right {
+            width: vm(20);
+            height: vm(40);
+            background: green;
+        }
     }
     .more-housing-estate {
         width: 100%;
@@ -18,6 +37,18 @@
             font-size: vm(16);
             color: #0284DC;
             font-weight: 600;
+        }
+    }
+    .remind {
+        display: flex;
+        span {
+            display: inline-block;
+        }
+        .change-price {
+           
+        }
+        .house-open {
+            
         }
     }
 }

@@ -6,10 +6,15 @@
 <template>
   <div class="housing-estate-more">
     <div class="housing-estate-activity">
-        
+        <div class="activity_left"></div>
+        <div class="activity_center"></div>
+        <div class="activity_right"></div>
     </div>
     <div class="more-housing-estate">
       <span>更多楼盘信息</span>
+    </div>
+    <div class="remind">
+     
     </div>
   </div>
 </template>
