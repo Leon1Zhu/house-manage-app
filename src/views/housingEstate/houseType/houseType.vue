@@ -8,7 +8,11 @@
     <div class="house-type-title">
         <span class="name">户型介绍</span>
         <span class="temp-span"></span>
-        <span class="view-all">全部户型</span>
+        <span class="view-all">
+          全部户型
+          <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-jiantou"></use>
+            </svg></span>
     </div>
     <div>
       
@@ -16,63 +20,109 @@
       <!-- slides -->
       <swiper-slide>
         <div class="house-type-content">
-        <div class="content-top"></div>
-        <div class="content-bottom">
-          <div class="room-type">
-            <span>2室2厅2卫</span>
-          </div>
-          <div class="room-area">
-            <span>建面103m2  朝向东西</span>
-          </div>
-          <div class="room-price">
-            <span>约154万/套</span>
-          </div>
-          <div class="room-style">
-            <button>全明格局</button>
+          <div class="content-top"></div>
+          <div class="content-bottom">
+            <div class="room-type">
+              <span>2室2厅2卫</span>
+            </div>
+            <div class="room-area">
+              <span>建面103m2  朝向东西</span>
+            </div>
+            <div class="room-price">
+              <span>约154万/套</span>
+            </div>
+            <div class="room-style">
+              <ul class="firse-nav">
+                <li class="nav-li">
+                    <span class="nav-name">全明格局</span>
+                </li>
+                <li class="nav-li">
+                    <span class="nav-name">主卧带卫</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
       </swiper-slide>
       <swiper-slide>
         <div class="house-type-content">
-        <div class="content-top"></div>
-        <div class="content-bottom">
-          <div class="room-type">
-            <span>2室2厅2卫</span>
-          </div>
-          <div class="room-area">
-            <span>建面103m2  朝向东西</span>
-          </div>
-          <div class="room-price">
-            <span>约154万/套</span>
-          </div>
-          <div class="room-style">
-            <button>全明格局</button>
+          <div class="content-top"></div>
+          <div class="content-bottom">
+            <div class="room-type">
+              <span>2室2厅2卫</span>
+            </div>
+            <div class="room-area">
+              <span>建面103m2  朝向东西</span>
+            </div>
+            <div class="room-price">
+              <span>约154万/套</span>
+            </div>
+            <div class="room-style">
+              <ul class="firse-nav">
+                <li class="nav-li">
+                    <span class="nav-name">全明格局</span>
+                </li>
+                <li class="nav-li">
+                    <span class="nav-name">主卧带卫</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
       </swiper-slide>
       <swiper-slide>
         <div class="house-type-content">
-        <div class="content-top"></div>
-        <div class="content-bottom">
-          <div class="room-type">
-            <span>2室2厅2卫</span>
-          </div>
-          <div class="room-area">
-            <span>建面103m2  朝向东西</span>
-          </div>
-          <div class="room-price">
-            <span>约154万/套</span>
-          </div>
-          <div class="room-style">
-            <button>全明格局</button>
+          <div class="content-top"></div>
+          <div class="content-bottom">
+            <div class="room-type">
+              <span>2室2厅2卫</span>
+            </div>
+            <div class="room-area">
+              <span>建面103m2  朝向东西</span>
+            </div>
+            <div class="room-price">
+              <span>约154万/套</span>
+            </div>
+            <div class="room-style">
+              <ul class="firse-nav">
+                <li class="nav-li">
+                    <span class="nav-name">全明格局</span>
+                </li>
+                <li class="nav-li">
+                    <span class="nav-name">主卧带卫</span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
       </swiper-slide>
-
-
+      <swiper-slide>
+        <div class="house-type-content">
+          <div class="content-top"></div>
+          <div class="content-bottom">
+            <div class="room-type">
+              <span>2室2厅2卫</span>
+            </div>
+            <div class="room-area">
+              <span>建面103m2  朝向东西</span>
+            </div>
+            <div class="room-price">
+              <span>约154万/套</span>
+            </div>
+            <div class="room-style">
+              <ul class="firse-nav">
+                <li class="nav-li">
+                    <span class="nav-name">全明格局</span>
+                </li>
+                <li class="nav-li">
+                    <span class="nav-name">主卧带卫</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+  
 
 
     </swiper>
@@ -91,6 +141,7 @@ export default {
       swiperOptionValue: {
         spaceBetween: 15,
       },
+      
     };
   },
   computed: {

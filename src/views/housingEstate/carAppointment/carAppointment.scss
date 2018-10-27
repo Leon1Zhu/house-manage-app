@@ -3,12 +3,28 @@
 .free-professional-transfer {
     border-bottom:  vm(1) solid rgba(126, 125, 125, 0.27);
     padding-bottom: 20px;
+    font-family: PingFangSC;
     .free-car {
         font-size: vm(16);
         color: #333333;
         line-height: vm(23);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         span {
             font-weight: 600;
+        }
+        .appointmen_buttong {
+            width:vm(64) ;
+            height: vm(23);
+            line-height: vm(19);
+            margin-right: vm(20);
+            font-size: vm(13);
+            text-align: center;
+            background-color: #F5942F;
+            border-radius: vm(1);
+            padding-top: vm(2);
+            color: #FFFFFF;
         }
     }
     .appointment-count {

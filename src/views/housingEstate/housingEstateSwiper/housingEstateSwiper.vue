@@ -6,8 +6,8 @@
 
 <template>
   <div class="swiper-option">
-    <div class="back">
-      <svg class="icon" aria-hidden="true" @click="push('/')">
+    <div class="back_button">
+      <svg class="icon" aria-hidden="true" @click="push('/index')">
         <use xlink:href="#icon-fanhui"></use>
       </svg>
     </div>

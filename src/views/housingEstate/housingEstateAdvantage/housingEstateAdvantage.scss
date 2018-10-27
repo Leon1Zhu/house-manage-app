@@ -1,0 +1,61 @@
+@import "../../../styles/globalscss";
+
+.house-advantage {
+  border-bottom: vm(1) solid rgba(126, 125, 125, 0.27);
+  padding-bottom: 20px;
+  font-family: PingFangSC;
+  .house-advantage-title {
+    display: flex;
+    span {
+      display: inline-block;
+    }
+    .temp-span {
+      flex: 1;
+    }
+    .name {
+      font-size: vm(18);
+      font-family: MicrosoftYaHei;
+      color: #000000;
+      line-height: vm(24);
+      font-weight: 600;
+    }
+    .view-all {
+        font-size: vm(13);
+        font-family: MicrosoftYaHei;
+        color: #858585;
+        line-height: vm(19);
+    }
+  }
+  .advantage-type {
+      margin: vm(15) 0 vm(10) 0;
+    .nav-li {
+        display: inline-block;
+        height: vm(23);
+        font-size: vm(13);
+        line-height: vm(23);
+        border: vm(1) solid rgba(151, 151, 151, 0.2964);
+        box-sizing: border-box;
+        border-radius: vm(1);
+        text-align: center;
+        padding: 0 vm(5) 0 vm(5) ;
+        color: #858585;
+    }
+    .nav-li:first-child {
+        color: #ffffff;
+        background-color: #48BDA9;
+        border: none;
+    }
+    .nav-li:not(:first-child) {
+        margin-left: vm(5);
+      }
+  }
+  .advantage-content {
+      p {
+        color: #858585;
+        font-size: vm(13);
+        line-height: vm(19);
+        word-wrap:break-word;
+        margin-top: vm(5);
+      }
+  }
+}
