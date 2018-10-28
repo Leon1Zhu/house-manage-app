@@ -3,17 +3,17 @@
 .swiper-option {
     position: relative;
     width: 100%;
-    .back {
+    .back_button {
       width: vm(14);
       height: vm(13);
       position: absolute;
       z-index: 1000;
-      color: #ffffff;
       margin-top: vm(10);
       margin-left: vm(10);
     }
     .icon {
       width: 100%;
+      color: #ffffff;
     }
     .swiper-slides {
       .housingImg {

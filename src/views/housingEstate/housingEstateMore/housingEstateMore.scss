@@ -9,21 +9,70 @@
         height: vm(40);
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-content: center;
         .activity_left {
             width: vm(20);
-            background: green;
             height: vm(40);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .semi-circle {
+                width: vm(8);
+                height: vm(16);
+                background-color: #ffffff;
+                border-radius: 0 vm(8) vm(8) 0;
+            }
         }
         .activity_center {
             width: vm(305);
             height: vm(40);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            div {
+                font-family: PingFangSC;
+                font-size: vm(13);
+                line-height: vm(19);
+            }
+            .activity_desc {
+                width: vm(205);
+                text-align: left;
+                span {
+                    color: #825C59;
+                    font-size: vm(13);
+                    line-height: vm(19);
+                }
+            }
+            .youhui{
+                width: vm(35);
+                height: vm(23);
+                text-align: center;
+                color: #ffffff;
+                background-color: #F54A2F;
+                padding-top: vm(2);
+            }
+            .lijlingqu {
+                width: vm(60);
+                height: vm(19);
+                text-align: center;
+                color: #ffffff;
+                background-color: #F54A2F;
+            }
+            
         }
         .activity_right {
             width: vm(20);
             height: vm(40);
-            background: green;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            .semi-circle {
+                width: vm(8);
+                height: vm(16);
+                background-color: #ffffff;
+                border-radius: vm(8) 0 0 vm(8);
+            }
         }
     }
     .more-housing-estate {
@@ -35,20 +84,34 @@
         padding-top: vm(14);
         span {
             font-size: vm(16);
+            font-family: PingFangSC;
+            line-height: vm(23);
             color: #0284DC;
-            font-weight: 600;
+            font-weight: 500;
         }
     }
     .remind {
         display: flex;
-        span {
-            display: inline-block;
+        flex-direction: row;
+        text-align: center;
+        margin-top: vm(15);
+        div {
+            font-size: vm(16);
+            font-family: PingFangSC;
+            line-height: vm(23);
+            color: #5d88af;
         }
-        .change-price {
-           
+        .price_change {
+           width: 50%;
+           .icon {
+               color: #979797;
+           }
         }
-        .house-open {
-            
+        .open_change {
+            width: 50%;
+            .icon {
+                color: #979797;
+            }
         }
     }
 }

@@ -3,7 +3,7 @@
 .house-type-info {
   border-bottom: vm(1) solid rgba(126, 125, 125, 0.27);
   padding-bottom: 20px;
-
+  font-family: PingFangSC;
   .house-type-title {
     display: flex;
     span {
@@ -14,12 +14,14 @@
     }
     .name {
       font-size: vm(18);
-      color: #333333;
+      font-family: MicrosoftYaHei;
+      color: #000000;
       line-height: vm(24);
       font-weight: 600;
     }
     .view-all {
         font-size: vm(13);
+        font-family: MicrosoftYaHei;
         color: #858585;
         line-height: vm(19);
     }
@@ -29,33 +31,29 @@
   }
 
   .swiper-container {
+    width: 100%;
     margin-top: vm(16);
-
+    
     .swiper-wrapper {
       width: vm(244);
       height: vm(245);
-
       .swiper-slide {
-        width: vm(244);
+        width: vm(244) !important;
         height: vm(245);
-        border: 1px solid red;
-
         .house-type-content {
-
           width: vm(244);
           height: vm(245);
-          border-radius: vm(1);
-          border: vm(1) solid #979797;
-
+          border: vm(1) solid rgba(151, 151, 151, 0.2964);
           .content-top {
             width: 100%;
             height: vm(133);
+            border-radius: vm(1) vm(1) 0 0;
             background-color: #FAE7C9;
           }
-
           .content-bottom {
             padding-left: vm(12);
-
+            border-radius: vm(1);
+           
             .room-type {
               font-size: vm(16);
               line-height: vm(21);
@@ -66,15 +64,36 @@
               font-size: vm(11);
               line-height: vm(15);
               color: #979797;
+              margin-top: vm(5);
             }
-
             .room-price {
               font-size: vm(13);
               line-height: vm(19);
               color: #ff0000;
+              margin-top: vm(5);
             }
 
             .room-style {
+              margin-top: vm(5);
+              .firse-nav {
+                .nav-li {
+                  display: inline-block;
+                  height: (17);
+                  border: vm(1) solid rgba(185, 222, 248, 0.2964);
+                  border-radius: vm(1);
+                  text-align: center;
+                  padding: 0 vm(5) vm(1) vm(5);
+                  .nav-name {
+                    font-size: vm(12);
+                    line-height: vm(17);
+                    color: #0284DC;
+                    opacity: 0.5521;
+                  }
+                }
+                .nav-li:not(:first-child) {
+                  margin-left: vm(5);
+                }
+              }
               button {
                 width: vm(60);
                 height: vm(17);

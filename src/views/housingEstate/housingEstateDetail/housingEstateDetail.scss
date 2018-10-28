@@ -1,0 +1,54 @@
+@import "../../../styles/globalscss";
+
+.house-detail {
+  border-bottom: vm(1) solid rgba(126, 125, 125, 0.27);
+  padding-bottom: 20px;
+  font-family: PingFangSC;
+  .house-detail-title {
+    display: flex;
+    span {
+      display: inline-block;
+    }
+    .temp-span {
+      flex: 1;
+    }
+    .name {
+      font-size: vm(18);
+      font-family: MicrosoftYaHei;
+      color: #000000;
+      line-height: vm(24);
+      font-weight: 600;
+    }
+    .view-all {
+        font-size: vm(13);
+        font-family: MicrosoftYaHei;
+        color: #858585;
+        line-height: vm(19);
+    }
+  }
+  .house-detail-content {
+      margin-top: vm(10);
+      ul {
+          li {
+              font-size: vm(13);
+              color:#858585;
+              line-height: vm(22); 
+              strong {
+                  color: #191919;
+                  font-weight: 600;
+              }
+          }
+      }
+  }
+   .house-deatail-more {
+       margin-top: vm(15);
+       border: vm(1) solid #DCDCDC;
+        width: 100%;
+        height: vm(30);
+        text-align: center;
+        color: #858585;
+        font-size: vm(13);
+        line-height: vm(22);
+        padding-top: vm(3);
+    }
+}

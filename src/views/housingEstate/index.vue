@@ -34,8 +34,17 @@
           <div class="default-margin house-type">
             <house-type></house-type>
           </div>
+          <!-- 楼盘优势 -->
+          <div class="default-margin">
+            <housing-estate-advantage></housing-estate-advantage>
+          </div>
+          <!-- 楼盘动态 -->
           <div class="default-margin">
             <housing-estate-dynamic></housing-estate-dynamic>
+          </div>
+          <!-- 楼盘详情 -->
+          <div class="default-margin">
+            <housing-estate-detail></housing-estate-detail>
           </div>
         </div>
       </scroll>
@@ -51,8 +60,10 @@ import HousingEstateSwiper from "./housingEstateSwiper/housingEstateSwiper";
 import HousingEstateName from "./housingEstateName/housingEstateName";
 import HousingEstateMore from "./housingEstateMore/housingEstateMore";
 import CarAppointment from "./carAppointment/carAppointment";
-import HouseType from "./houseType/houseType.vue";
-import HousingEstateDynamic from "./housingEstateDynamic/housingEstateDynamic.vue"
+import HouseType from "./houseType/houseType";
+import HousingEstateDynamic from "./housingEstateDynamic/housingEstateDynamic";
+import HousingEstateAdvantage from "./housingEstateAdvantage/housingEstateAdvantage";
+import HousingEstateDetail from "./housingEstateDetail/housingEstateDetail";
 
 export default {
   name: "HousingEstate",
@@ -67,7 +78,9 @@ export default {
     "housing-estate-more": HousingEstateMore,
     "car-appointment": CarAppointment,
     "house-type": HouseType,
-    "housing-estate-dynamic": HousingEstateDynamic
+    "housing-estate-dynamic": HousingEstateDynamic,
+    "housing-estate-advantage": HousingEstateAdvantage,
+    "housing-estate-detail": HousingEstateDetail
   },
   created() {},
   mounted() {},
