@@ -213,6 +213,6 @@
    }
 
    .drop-up {
-     bottom: 3px;
+     bottom: 0px;
    }
  </style>
