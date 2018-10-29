@@ -8,6 +8,7 @@
   width: 100%;
   position: relative;
   padding: 0 vm($padding-width);
+  overflow: hidden;
   .search-house-list {
     .search-house-content {
       border-top: 1px solid rgba(126, 125, 125, .27);
@@ -77,5 +78,8 @@
         border-bottom: 1px solid rgba(126, 125, 125, .27);
       }
     }
+  }
+  .wrapper {
+    height: calc(100vh - 85vmin);
   }
 }
