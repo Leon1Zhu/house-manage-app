@@ -12,6 +12,9 @@
       .like-content {
         margin-top: vm(10);
         border: 1px solid #979797;
+        img {
+          width: 100%;
+        }
         .text-content {
           padding: vm(10) vm(10);
           .name-price {
