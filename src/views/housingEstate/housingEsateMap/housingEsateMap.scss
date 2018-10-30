@@ -10,17 +10,28 @@
     color: #000;
     font-weight: bold;
   }
-  .bm-view {
+  .bm-view{
     width: 100%;
     height: vm(180);
   }
   ul {
     display: flex;
+    margin-bottom: vm(8);
     li {
+      cursor: pointer;
       flex: 1;
       color: #858585;
       font-size: 13px;
-      padding: vm(10) 0;
+      span {
+        display: inline-block;
+        padding: vm(10) 0;
+      }
+      &.active {
+        color: #0291D8;
+        span {
+          border-bottom: vm(2) solid #0291D8;
+        }
+      }
     }
   }
 }
