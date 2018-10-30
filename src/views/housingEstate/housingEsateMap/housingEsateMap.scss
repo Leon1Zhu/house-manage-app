@@ -5,8 +5,22 @@
 
 @import '../../../styles/globalscss';
 .housing-map-content {
+  h1 {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+  }
   .bm-view {
     width: 100%;
     height: vm(180);
+  }
+  ul {
+    display: flex;
+    li {
+      flex: 1;
+      color: #858585;
+      font-size: 13px;
+      padding: vm(10) 0;
+    }
   }
 }

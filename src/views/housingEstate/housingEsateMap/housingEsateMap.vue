@@ -6,7 +6,7 @@
 <div class="housing-map-content">
   <h1>周边配套</h1>
   <ul class="pt-content">
-    <li class="pt-li">交通</li>
+    <li class="pt-li" @click="change">交通</li>
     <li class="pt-li">商超</li>
     <li class="pt-li">教育</li>
     <li class="pt-li">餐饮</li>
