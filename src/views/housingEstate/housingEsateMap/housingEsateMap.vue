@@ -12,7 +12,7 @@
     <li class="pt-li">餐饮</li>
     <li class="pt-li">医疗</li>
   </ul>
-  <baidu-map class="bm-view" ak="46yjCCVOEDlQuhme32vkfT2ttMy83pTk">
+  <baidu-map class="bm-view" ak="46yjCCVOEDlQuhme32vkfT2ttMy83pTk" :center="center" :zoom="zoom" @ready="handler">
   </baidu-map>
 </div>
 </template>
@@ -24,13 +24,23 @@ import BaiduMap from 'vue-baidu-map/components/map/Map.vue'
 export default {
   name: 'housing-esate-map',
   data() {
-    return {};
+    return {
+      center: {lng: 0, lat: 0},
+      zoom: 3
+    };
   },
   components: {
     BaiduMap,
   },
   created() {},
   mounted() {},
-  methods: {},
+  methods: {
+    handler ({BMap, map}) {
+      console.log(BMap, map)
+      this.center.lng = 116.404
+      this.center.lat = 39.915
+      this.zoom = 15
+    }
+  },
 };
 </script>

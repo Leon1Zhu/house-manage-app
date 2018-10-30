@@ -3,3 +3,10 @@
   @date 2018/10/30 10:18 AM
 */
 
+@import '../../../styles/globalscss';
+.housing-map-content {
+  .bm-view {
+    width: 100%;
+    height: vm(180);
+  }
+}
