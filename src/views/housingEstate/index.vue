@@ -46,6 +46,10 @@
           <div class="default-margin">
             <housing-estate-detail></housing-estate-detail>
           </div>
+          <!--周边配套-->
+          <div class="default-margin">
+            <housing-esate-map></housing-esate-map>
+          </div>
         </div>
       </scroll>
     </div>
@@ -64,6 +68,7 @@ import HouseType from "./houseType/houseType";
 import HousingEstateDynamic from "./housingEstateDynamic/housingEstateDynamic";
 import HousingEstateAdvantage from "./housingEstateAdvantage/housingEstateAdvantage";
 import HousingEstateDetail from "./housingEstateDetail/housingEstateDetail";
+import housingEsateMap from './housingEsateMap/housingEsateMap';
 
 export default {
   name: "HousingEstate",
@@ -80,7 +85,8 @@ export default {
     "house-type": HouseType,
     "housing-estate-dynamic": HousingEstateDynamic,
     "housing-estate-advantage": HousingEstateAdvantage,
-    "housing-estate-detail": HousingEstateDetail
+    "housing-estate-detail": HousingEstateDetail,
+    housingEsateMap,
   },
   created() {},
   mounted() {},
