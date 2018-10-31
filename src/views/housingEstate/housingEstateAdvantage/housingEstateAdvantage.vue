@@ -10,20 +10,14 @@
     </div>
     <div class="advantage-type">
         <ul class="firse-nav">
-            <li class="nav-li">
-                <span class="nav-name">优质地产</span>
-            </li>
-            <li class="nav-li">
-                <span class="nav-name">4A级风景区</span>
-            </li>
-            <li class="nav-li">
-                <span class="nav-name">优质地产</span>
+            <li class="nav-li" v-for="item in advantageList" v-bind:key="item.id" v-on:click="advantageType(item)" v-bind:class="{'nav-name-active': advantageObj && advantageObj.id === item.id}">
+                <span class="nav-name ">{{item.type}}</span>
             </li>
         </ul>
     </div>
     <div class="advantage-content">
-        <p>我是优质地产</p>
-        <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+        <p>{{advantageObj.title}}</p>
+        <p>{{advantageObj.typeDesc}}</p>
     </div>
 </div>
 </template>
@@ -34,14 +28,40 @@ import "./housingEstateAdvantage.scss";
 export default {
   name: "house-advantage",
   data() {
-    return {}
+    return {
+        advantageObj: {},
+        advantageList: [
+            {
+                id: 1,
+                type: '优质地产',
+                title: '我是优质地产',
+                typeDesc: '1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+            }, {
+                id: 2,
+                title: '我是4A级风景区',
+                type: '4A级风景区',
+                typeDesc: '2xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+            }, {
+                id: 3,
+                title: '我是优质地产',
+                type: '优质地产',
+                typeDesc: '3xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+            }
+        ]
+    }
   },
   computed: {
   },
   components: {
   },
-  created() {},
+  created() {
+      this.advantageObj = this.advantageList[0];
+  },
   mounted() {},
-  methods: {}
+  methods: {
+      advantageType (item) {
+          this.advantageObj = item;
+      }
+  }
 };
 </script>

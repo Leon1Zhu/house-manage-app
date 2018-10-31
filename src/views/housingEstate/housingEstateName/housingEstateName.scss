@@ -20,16 +20,43 @@
         
     }
     .house-price {
+        display: flex;
         margin-top: 10px;
+        span {
+            font-size: vm(16);
+            line-height: vm(23);
+            font-weight: 500;
+            color: #858585;
+        }
         strong {
             color: #ff0000;
         }
     }
     .house-open-sale {
+        display: flex;
         span {
-            color: #333333;
+            color: #858585;
             font-size: vm(16);
             font-weight: 500;
+        }
+        .sale-time {
+            color: #333333;
+        }
+
+    }
+    .house-address {
+        display: flex;
+        span {
+            font-size: vm(16);
+            line-height: vm(23);
+            font-weight: 500;
+            color: #858585;
+            word-break:break-all;
+        }
+        .address-detail {
+            flex: 1;
+            color: #333333;
+            word-wrap: break-word;
         }
     }
 }

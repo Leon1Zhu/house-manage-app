@@ -9,10 +9,9 @@
         <span class="name">户型介绍</span>
         <span class="temp-span"></span>
         <span class="view-all">
-          全部户型
-          <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-jiantou"></use>
-            </svg></span>
+          全部户型 <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-arrow-right-copy-copy-copy"></use>
+      </svg></span>
     </div>
     <div>
       

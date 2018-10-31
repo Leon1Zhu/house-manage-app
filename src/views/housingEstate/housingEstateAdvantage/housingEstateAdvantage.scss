@@ -40,10 +40,10 @@
         padding: 0 vm(5) 0 vm(5) ;
         color: #858585;
     }
-    .nav-li:first-child {
-        color: #ffffff;
-        background-color: #48BDA9;
-        border: none;
+    .nav-name-active {
+      color: #ffffff;
+      background-color: #48BDA9;
+      border: none;
     }
     .nav-li:not(:first-child) {
         margin-left: vm(5);

@@ -16,14 +16,19 @@
       font-size: vm(18);
       font-family: MicrosoftYaHei;
       color: #000000;
-      line-height: vm(24);
+      line-height: vm(23);
       font-weight: 600;
     }
     .view-all {
-        font-size: vm(13);
-        font-family: MicrosoftYaHei;
+        font-size: vm(16);
+        font-family: PingFangSC;
         color: #858585;
-        line-height: vm(19);
+        line-height: vm(23);
+        .icon {
+          font-size: vm(16);
+          color: #858585;
+          line-height: vm(23);
+        }
     }
     
   }
