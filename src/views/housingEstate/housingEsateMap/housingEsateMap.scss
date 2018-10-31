@@ -3,3 +3,63 @@
   @date 2018/10/30 10:18 AM
 */
 
+@import '../../../styles/globalscss';
+.housing-map-content {
+  h1 {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+  }
+  #allmap{
+    width: 100%;
+    height: vm(200);
+  }
+  #r-result {
+    .result-li {
+      color: rgba(0, 0, 0, 0.9);
+      font-size: 13px;
+      padding: vm(5) 0;
+      font-weight: 450;
+      display: flex;
+      font-family: PingFangSC;
+      .result-ditance {
+        flex: 1;
+        text-align: right;
+        color: #858585;
+        font-size: 13px;
+      }
+    }
+  }
+  .showMore, .showLess {
+    width: 100%;
+    height: vm(30);
+    font-size: 13px;
+    color: #858585;
+    text-align: center;
+    line-height: vm(30);
+    border: 1px solid #DCDCDC;
+    .icon {
+      padding-top: vm(2);
+    }
+  }
+  .pt-content {
+    display: flex;
+    margin-bottom: vm(8);
+    li {
+      cursor: pointer;
+      flex: 1;
+      color: #858585;
+      font-size: 13px;
+      span {
+        display: inline-block;
+        padding: vm(10) 0;
+      }
+      &.active {
+        color: #0291D8;
+        span {
+          border-bottom: vm(2) solid #0291D8;
+        }
+      }
+    }
+  }
+}

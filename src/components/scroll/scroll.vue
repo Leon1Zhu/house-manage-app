@@ -4,9 +4,9 @@
 -->
 <template>
   <div ref="wrapper" class="scroll-content">
-    <p class="drop-down" v-if="dropDown">松手刷新数据...</p>
+    <p class="drop-down" v-if="dropDown && pullup">松手刷新数据...</p>
     <slot></slot>
-    <p class="drop-up" v-if="dropup">
+    <p class="drop-up" v-if="dropup && pulldown">
       <mu-circular-progress class="demo-circular-progress" :size="24"></mu-circular-progress>
       <span>松手加载更多</span>
     </p>

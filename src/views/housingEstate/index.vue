@@ -7,8 +7,8 @@
   <section id="index-content">
     <div>
       <scroll class="wrapper"
-              :pulldown="true"
-              :pullUpLoad="true">
+              :pulldown="false"
+              :pullUpLoad="false">
         <div class="housing-estate-page">
           <!-- 住宅图片展示 -->
           <div>
@@ -50,6 +50,10 @@
           <div class="default-margin">
             <housing-esate-map></housing-esate-map>
           </div>
+          <!--猜你喜欢-->
+          <div class="default-margin">
+            <guess-like></guess-like>
+          </div>
         </div>
       </scroll>
     </div>
@@ -69,11 +73,16 @@ import HousingEstateDynamic from "./housingEstateDynamic/housingEstateDynamic";
 import HousingEstateAdvantage from "./housingEstateAdvantage/housingEstateAdvantage";
 import HousingEstateDetail from "./housingEstateDetail/housingEstateDetail";
 import housingEsateMap from './housingEsateMap/housingEsateMap';
+import guessLike from '../../components/guessLike/guessLike';
+import indexApi from '../../api/indexPage';
 
 export default {
   name: "HousingEstate",
   data() {
-    return {};
+    return {
+      index: 1,
+      pagesize: 5,
+    };
   },
   components: {
     scroll: scroll,
@@ -87,9 +96,18 @@ export default {
     "housing-estate-advantage": HousingEstateAdvantage,
     "housing-estate-detail": HousingEstateDetail,
     housingEsateMap,
+    guessLike,
   },
-  created() {},
+  created() {
+    this.initGuessLikeData();
+  },
   mounted() {},
-  methods: {}
+  methods: {
+    initGuessLikeData() {
+      indexApi.getLikeHouse(this.index, this.pagesize).then((response) => {
+
+      }).catch(() => {});
+    },
+  }
 };
 </script>
