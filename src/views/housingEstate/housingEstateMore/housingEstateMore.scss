@@ -114,5 +114,22 @@
             }
         }
     }
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+        position: absolute;
+      }
+      .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
+        position: absolute;
+      }
+    .call {
+        position: absolute;
+        border: 1px solid red;
+        display: block;
+        z-index: 2000;
+        width: 100%;
+        height: vm(100);
+        background-color: #ffffff;
+    }
 }
 

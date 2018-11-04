@@ -17,6 +17,9 @@
         <span>
             {{detailMoreBut.butTitle}} 
         </span>
+        <svg class="icon" aria-hidden="true">
+          <use :xlink:href="detailMoreBut.icon"></use>
+        </svg>
     </div>   
 </div>
 </template>
@@ -30,7 +33,7 @@ export default {
     return {
         detailMoreBut: {
             butTitle: '展开更多',
-            icon: '',
+            icon: '#icon-jiantouxia',
             status: 1
         },
         detailList: [
@@ -63,8 +66,9 @@ export default {
   methods: {
       viewMoreFun () {
           if (this.detailMoreBut.status === 1) {
-              this.detailMoreBut.butTitle = '收起';
+              this.detailMoreBut.butTitle = '收起更多';
               this.detailMoreBut.status = 0;
+              this.detailMoreBut.icon = '#icon-jiantoushang';
               const demoList = [
                 {
                     id: 5,
@@ -88,6 +92,7 @@ export default {
               this.detailMoreBut.butTitle = '展开更多';
               this.detailMoreBut.status = 1;
               this.detailList.splice(4, 6);
+              this.detailMoreBut.icon = '#icon-jiantouxia';
           }
           
       }

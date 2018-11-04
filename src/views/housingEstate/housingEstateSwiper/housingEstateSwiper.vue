@@ -13,14 +13,13 @@
     <!--</div>-->
     <swiper class="swiper-slides" :options="swiperOptionValue" ref="mySwiper" >
         <!-- slides -->
-        <swiper-slide class="housingImg"><img src="../../../assets/guessLike.png"/></swiper-slide>
-        <swiper-slide class="housingImg"><img src="../../../assets/guessLike.png"/></swiper-slide>
-        <swiper-slide class="housingImg"><img src="../../../assets/guessLike.png"/></swiper-slide>
-        <swiper-slide class="housingImg"><img src="../../../assets/guessLike.png"/></swiper-slide>
+        <swiper-slide class="housingImg" v-for="item in weiperSildeList" :key="item.id">
+          <img src="@/assets/guessLike.png">
+          </swiper-slide>
     </swiper>
     <div class="total-pages">
       <div>
-        <span>共4张</span>
+        <span>共{{sildeCount}}张</span>
       </div>
     </div>
   </div>
@@ -44,7 +43,14 @@ export default {
           //type : 'custom',
         },
         loop: true
-      }
+      },
+      weiperSildeList: [
+        {
+          id: 1,
+          imgUrl: '@/assets/guessLike.png'
+        }
+      ],
+      sildeCount: 0
     };
   },
   computed: {
@@ -56,7 +62,9 @@ export default {
     swiper,
     swiperSlide
   },
-  created() {},
+  created() {
+    this.sildeCount = this.weiperSildeList.length;
+  },
   mounted() {},
   methods: {
     push(route) {

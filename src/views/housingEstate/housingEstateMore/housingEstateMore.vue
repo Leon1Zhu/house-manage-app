@@ -24,37 +24,47 @@
       <span>更多楼盘信息</span>
     </div>
     <div class="remind">
-      <div class="price_change">
+      <div class="price_change" @click="emitToParent">
         <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-bianjia"></use>
             </svg>
         <span>变价提醒我</span>
       </div>
-      <div class="open_change">
+      <div class="open_change" @click="emitToParent">
         <svg class="icon" aria-hidden="true">
               <use xlink:href="#icon-kaipan"></use>
             </svg>
         <span>开盘提醒我</span>
       </div>
     </div>
+    <call-modal v-if="showModal" @close="showModal = false">
+    </call-modal>
   </div>
+  
 </template>
 
 <script>
 import "./housingEstateMore.scss";
+import CallModal from "../../../components/callModal/callModal";
 
 export default {
   name: "housing-estate-more",
   data() {
-    return {};
+    return {
+      showModal: false
+    };
   },
   computed: {
   },
   components: {
-
+    "call-modal": CallModal,
   },
   created() {},
   mounted() {},
-  methods: {}
+  methods: {
+    emitToParent() {
+      this.$emit('child-event', true);
+    }
+  }
 };
 </script>

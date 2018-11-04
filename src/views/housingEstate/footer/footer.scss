@@ -1,0 +1,32 @@
+@import "../../../styles/globalscss";
+
+.housing-estate-footer {
+    width: 100%;
+    height: vm(49);
+    padding-left: vm(15);
+    padding-right: vm(15);
+    box-shadow: 0 vm(-1) vm(2) 0 rgba(0, 0, 0, 0.04);
+    display: flex;
+    span {
+      display: inline-block;
+    }
+    .text-desc {
+      flex: 1;
+      color: #9E9E9E;
+      font-family: MicrosoftYaHei;
+      margin-top: vm(20);
+      margin-left: vm(10);
+    }
+    .text-icon {
+      margin-top: vm(20);
+      color: #48BDA9;
+    }
+    .mu-button {
+        width: vm(237);
+        height: vm(32);
+        font-family: MicrosoftYaHei;
+        font-size: vm(13);
+        line-height: vm(18);
+        margin-top: vm(9);
+    }
+}

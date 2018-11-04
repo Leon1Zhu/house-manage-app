@@ -2,24 +2,32 @@
 
 #index-content {
   position: relative;
-  overflow: hidden;
-  .wrapper {
-    height: calc(100vh);
-    .button-nav {
-      margin-top: 17px;
-      margin-left: vm(15);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .house-content {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    .wrapper {
+      height: calc(100vh);
+      .button-nav {
+        margin-top: 17px;
+        margin-left: vm(15);
+      }
+      .default-margin {
+        margin-top: 17px;
+        margin-left: vm(15);
+        margin-right: vm(15);
+      }
     }
-    .default-margin {
-      margin-top: 17px;
-      margin-left: vm(15);
-      margin-right: vm(15);
+    .introduce-content {
+      padding: vm(10) vm($padding-width) vm(20);
     }
-  }
-  .introduce-content {
-    padding: vm(10) vm($padding-width) vm(20);
-  }
-  .guess-like h1 {
-    font-size: 18px;
+    .guess-like h1 {
+      font-size: 18px;
+    }   
   }
 }
 

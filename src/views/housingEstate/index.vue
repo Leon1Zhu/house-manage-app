@@ -5,7 +5,7 @@
 -->
 <template>
   <section id="index-content">
-    <div>
+    <div class="house-content">
       <scroll class="wrapper"
               :pulldown="false"
               :pullUpLoad="false">
@@ -24,7 +24,7 @@
           </div>
           <!-- 更多楼盘 -->
           <div class="default-margin housing-estate-mores">
-            <housing-estate-more></housing-estate-more>
+            <housing-estate-more @child-event="parentEvent"></housing-estate-more>
           </div>
           <!-- 免费专业接送看房 -->
           <div class="default-margin free-view-house">
@@ -57,12 +57,21 @@
         </div>
       </scroll>
     </div>
+    <div class="house-footer">
+      <housing-estate-footer></housing-estate-footer>
+    </div>
+    <div>
+    <!-- 弹出框 -->
+    <call-modal v-if="showModal" @close="showModal = false">
+    </call-modal>
+    </div>
   </section>
 </template>
 
 <script>
 import "./index.scss";
 import scroll from "../../components/scroll/scroll";
+import CallModal from "../../components/callModal/callModal";
 import HousingEstateNnav from "./nav/nav";
 import HousingEstateSwiper from "./housingEstateSwiper/housingEstateSwiper";
 import HousingEstateName from "./housingEstateName/housingEstateName";
@@ -72,9 +81,10 @@ import HouseType from "./houseType/houseType";
 import HousingEstateDynamic from "./housingEstateDynamic/housingEstateDynamic";
 import HousingEstateAdvantage from "./housingEstateAdvantage/housingEstateAdvantage";
 import HousingEstateDetail from "./housingEstateDetail/housingEstateDetail";
-import housingEsateMap from './housingEsateMap/housingEsateMap';
-import guessLike from '../../components/guessLike/guessLike';
-import indexApi from '../../api/indexPage';
+import housingEsateMap from "./housingEsateMap/housingEsateMap";
+import guessLike from "../../components/guessLike/guessLike";
+import indexApi from "../../api/indexPage";
+import Footer from "./footer/footer";
 
 export default {
   name: "HousingEstate",
@@ -82,6 +92,7 @@ export default {
     return {
       index: 1,
       pagesize: 5,
+      showModal: false
     };
   },
   components: {
@@ -95,8 +106,10 @@ export default {
     "housing-estate-dynamic": HousingEstateDynamic,
     "housing-estate-advantage": HousingEstateAdvantage,
     "housing-estate-detail": HousingEstateDetail,
+    "housing-estate-footer": Footer,
+    "call-modal": CallModal,
     housingEsateMap,
-    guessLike,
+    guessLike
   },
   created() {
     this.initGuessLikeData();
@@ -104,10 +117,15 @@ export default {
   mounted() {},
   methods: {
     initGuessLikeData() {
-      indexApi.getLikeHouse(this.index, this.pagesize).then((response) => {
-
-      }).catch(() => {});
+      indexApi
+        .getLikeHouse(this.index, this.pagesize)
+        .then(response => {})
+        .catch(() => {});
     },
+    parentEvent: function(data) {
+      console.log('333333333333333333333333333', data);
+      this.showModal = data;
+    }
   }
 };
 </script>
